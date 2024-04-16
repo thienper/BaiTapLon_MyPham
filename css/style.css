@@ -1,0 +1,301 @@
+.header a {
+    color: white !important;
+}
+
+.header {
+    background-color: #1F261D;
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    /* background-color: aquamarine; */
+}
+
+.logo {
+    width: 140px;
+}
+
+.fa-bars {
+    color: #fff;
+}
+
+.dropdown-menu {
+    background-color: #1F261D;
+}
+
+.dropdown-menu a:hover {
+    color: black !important;
+}
+
+/* Content */
+.content-top-1 {
+    background-image: url(../Img/HinhBig1.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+.content-top-2 {
+    background-image: url(../Img/HinhBig2.jpg);
+    background-size: cover;
+    height: 500px;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.content-top-3 {
+    background-image: url(../Img/HinhBig3.jpg);
+    background-size: cover;
+    height: 500px;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-inner {
+    transition-duration: 0.5s;
+}
+
+.content-2 {
+    background-color: #1F261D;
+}
+
+.content-3 {
+    background-color: #1F261D;
+}
+
+.product-3-top-child {
+    width: 45%;
+}
+
+.product-3-bottom-child {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-4 {
+    display: flex;
+    background-color: #1F261D;
+    padding: 50px;
+
+}
+
+.content-4 div {
+    width: 24%;
+}
+
+.content-4 img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.content-4 img:hover {
+    width: 105%;
+}
+
+footer {
+    background-color: black;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+
+}
+
+footer tr,
+td {
+    padding: 10px;
+}
+
+footer tr,
+td,
+th {
+    text-align: center;
+}
+
+.hihi i {
+
+    padding: 5px;
+}
+
+.hihi {
+    display: flex;
+}
+
+footer div img {
+    width: 110px;
+    height: 80px;
+}
+
+footer .pay img {
+    width: 300px;
+    height: 40px;
+}
+
+.footer-last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+/* Card */
+#products {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.SP {
+    width: 25%;
+    padding: 10px;
+}
+
+.part-2 {
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width:1080px) {
+    .SP {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .SP {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:480px) {}
+
+/* Produc-2 */
+.product-2-top {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.product-2-top-child {
+    width: 48%;
+    height: 340px;
+}
+
+.product-2-top-child-child {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.product-2-top-child img {
+    width: 100%;
+}
+
+.title-products-2 {
+    color: white;
+}
+
+/*  */
+.product-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.part-1 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.icons {
+    color: #1F261D;
+    position: absolute;
+    left: 50%;
+    font-size: 30px;
+    bottom: -30px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    transition: 0.2s ease-in;
+}
+
+.part-1:hover .icons {
+    transform: translate(-50%, -50px);
+}
+
+.icons i:hover {
+    transform: scale(1.2);
+}
+
+/* Carousel */
+
+/* Model */
+.modal-header {
+    display: flex;
+    justify-content: center;
+}
+
+.login:hover {
+    border: 1px solid white !important;
+}
+
+/* Content */
+.conntent {
+    width: 100%;
+}
+
+#gioHang {
+    padding-top: 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: #1F261D;
+}
+
+.sp {
+    margin: 10px;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid white; */
+}
+
+.col-3 {
+    height: 200px;
+}
+
+.content-4 {
+    padding-bottom: 120px;
+}
+
+.ThongTinTaiKhoan tr td {
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#taokhoan a {
+    text-decoration: none;
+    color: white;
+}
+
+.timkiem {
+    background-color: #1F261D;
+}

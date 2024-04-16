@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Dang Ky</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <style>
+        .form-control {
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style=" flex-direction: column;
+    align-items: center; width: 100vw; height: 100vh; background-image: url(../Img/HinhBig2.jpg)"
+        class="d-flex container-fluid">
+        <h2 style="padding: 20px; color: white !important; font-weight: bold; font-size: 40px;">Sign UP</h2>
+        <form action="" onsubmit="signup()">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><input class="form-control" type="text" name="" id="fname" required
+                                placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label id="errorfname" for=""></label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="form-control" type="text" name="" id="lname" required placeholder="Last Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="errorlname" for=""></label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="form-control" type="text" name="" id="username" required
+                                placeholder="Your UserName"></td>
+                    </tr>
+                    <tr>
+                        <td><label id="errorusername" for=""></label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="form-control" type="password" name="" id="password" required
+                                placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><label id="errormk" for=""></label></td>
+                    </tr>
+                    <tr style="margin-top: 10px;">
+                        <td>
+                            <input type="checkbox">
+                            <label style="color: white;" for="">Yes, I agree with Grace Privacy Policy and Terms of Use
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=" justify-content: center;" class="d-flex">
+                            <button style="padding: 5px 50px; background-color: rgb(85, 192, 85);"
+                                class="btn btn-succcess" type="submit">Sign
+                                Up</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 10px; border-bottom: 2px solid white;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: white; justify-content: center;" class="d-flex">
+                            Bạn đã có tài khoản ? <a href="DangNhap.html"> Đăng Nhập </a> ngay
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sach San Pham</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Hieu ung Scroll-->
+    <link rel="stylesheet" href="../aos-master/dist/aos.css" rel="stylesheet">
+    <script src="../aos-master/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <style>
+        .loaiSanPham {
+            justify-content: center;
+        }
+
+        .loaiSanPham a {
+            width: 150px;
+            padding: 20px;
+            text-decoration: none;
+            border: 2px dashed white;
+            color: white;
+            font-weight: bold;
+        }
+
+        .loaiSanPham a:hover {
+            color: green;
+        }
+
+
+        .loaiSanPham div {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg header">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="nav-link"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="Home.html">
+                        HOME
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="DanhSachSanPhamChuaDangNhap.html">PRODUCT</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="TrangThongTin.html">DOCS</a>
+                </li>
+                <li class="nav-item">
+                    <a onclick="scrollToBottom()" id="contact" class="nav-link" href="LienLac.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand" href="TrangChu.html"><img class="logo" src="../Img/logoMyPham.png" alt=""> </a>
+        <ul class="navbar-nav mr-auto" id="iconList">
+            <li class="nav-item">
+                <a class="nav-link" href="TimKiem.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li class="nav-item">
+                <a onclick="showtk()" onload="layDuLieu();" class="nav-link" href="DangNhap.html">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-regular fa-star"></i></a>
+            </li>
+            <li class="nav-item">
+                <a onclick="showcart()" href="DangNhap.html" class="nav-link"><i
+                        class="fa-solid fa-basket-shopping"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Tai Khoan -->
+
+    <div class="content">
+        <!-- Carousel -->
+
+        <!-- Carousel End-->
+        <div class="content-2">
+            <div class="d-flex " style="flex-direction: column;align-items: center;">
+                <h2 style="color: #ffffff; font-weight: bold; padding: 10px;">Our Featured Products</h2>
+                <div style="color: #ffffffaf; font-size: larger; padding-bottom: 50px;">Get the skin you want to feel
+                </div>
+            </div>
+            <div class="loaiSanPham d-flex">
+                <div class="all">
+                    <a href="DanhSachSanPhamChuaDangNhap.html">ALL</a>
+                </div>
+                <div class="sale">
+                    <a style="color: green;" href="SaleChuaDangNhap.html">SALE</a>
+                </div>
+                <div class="nosale">
+                    <a href="NoSaleChuDangNhap.html">NO SALE</a>
+                </div>
+            </div>
+            <!-- SP -->
+            <div data-aos="fade-up" data-aos-duration="2000" id="products">
+                <div data-aos="fade-up" data-aos-duration="1500" class="SP">
+                    <a href="../aos-master/demo/js/ChiTietSanPham1.html">
+                        <div id="product" class="single-product">
+                            <div class="part-1">
+                                <img src="../Img/SP1.jpg" class="product-img" alt="">
+                                <div class="icons">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-expand"></i>
+                                </div>
+                            </div>
+                            <div class="part-2">
+                                <nav class="d-flex">
+                                    <del style="padding: 5px;">$40.00</del>
+                                    <p style="margin: 0; padding: 5px;">$30.00</p>
+                                </nav>
+                                <a href="#" style="color: white; font-size: 20px;">Shield Conditioner</a>
+                                <nav style="font-size: 14px;">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span style="padding-left: 2px;">2947 reviews</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="1500" class="SP">
+                    <a href="../aos-master/demo/js/ChiTietSanPham5.html">
+                        <div id="product" class="single-product">
+                            <div class="part-1">
+                                <img src="../Img/SP5.jpg" class="product-img" alt="">
+                                <div class="icons">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-expand"></i>
+                                </div>
+                            </div>
+                            <div class="part-2">
+                                <nav class="d-flex">
+                                    <del style="padding: 5px;">$40.00</del>
+                                    <p style="margin: 0; padding: 5px;">$30.00</p>
+                                </nav>
+                                <a href="#" style="color: white; font-size: 20px;">Shield Conditioner</a>
+                                <nav style="font-size: 14px;">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span style="padding-left: 2px;">2947 reviews</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1500" class="SP">
+                    <a href="../aos-master/demo/js/ChiTietSanPham6.html">
+                        <div id="product" class="single-product">
+                            <div class="part-1">
+                                <img src="../Img/SP6.jpg" class="product-img" alt="">
+                                <div class="icons">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-expand"></i>
+                                </div>
+                            </div>
+                            <div class="part-2">
+                                <nav class="d-flex">
+                                    <del style="padding: 5px;">$40.00</del>
+                                    <p style="margin: 0; padding: 5px;">$30.00</p>
+                                </nav>
+                                <a href="#" style="color: white; font-size: 20px;">Intensive Glow C+ Serum</a>
+                                <nav style="font-size: 14px;">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span style="padding-left: 2px;">2947 reviews</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1500" class="SP">
+                    <a href="../aos-master/demo/js/ChiTietSanPham7.html">
+                        <div id="product" class="single-product">
+                            <div class="part-1">
+                                <img src="../Img/SP7.jpg" class="product-img" alt="">
+                                <div class="icons">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-expand"></i>
+                                </div>
+                            </div>
+                            <div class="part-2">
+                                <nav class="d-flex">
+                                    <del style="padding: 5px;">$40.00</del>
+                                    <p style="margin: 0; padding: 5px;">$30.00</p>
+                                </nav>
+                                <a href="#" style="color: white; font-size: 20px;">Hand Cream</a>
+                                <nav style="font-size: 14px;">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span style="padding-left: 2px;">2947 reviews</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1500" class="SP">
+                    <a href="../aos-master/demo/js   /ChiTietSanPham8.html">
+                        <div id="product" class="single-product">
+                            <div class="part-1">
+                                <img src="../Img/SP8.jpg" class="product-img" alt="">
+                                <div class="icons">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-expand"></i>
+                                </div>
+                            </div>
+                            <div class="part-2">
+                                <nav class="d-flex">
+                                    <del style="padding: 5px;">$60.00</del>
+                                    <p style="margin: 0; padding: 5px;">$50.00</p>
+                                </nav>
+                                <a href="#" style="color: white; font-size: 20px;">Vital Eye Cream</a>
+                                <nav style="font-size: 14px;">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span style="padding-left: 2px;">2947 reviews</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="color: white;">
+        <table>
+            <thead>
+                <tr>
+                    <th> Company</th>
+                    <th>Useful links</th>
+                    <th>Information</th>
+                    <th>Good emails.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Find a location nearest</td>
+                    <td><a href="#">New Products</a></td>
+                    <td><a href="#">Start a Return</a></td>
+                    <td>Enter your email below to be the first to know about new collections and product launches.</td>
+                </tr>
+                <tr>
+                    <td>+(84) 974122850</td>
+                    <td><a href="#">Bundle & Save</a></td>
+                    <td><a href="#">Shipping FAQ</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#">nghiemchithien471@gmail.com</a></td>
+                    <td><a href="#">Online Gift Card</a></td>
+                    <td><a href="#">Terms & Conditions</a></td>
+                    <td>
+                        <input type="text" name="" id="" placeholder="Nhap Email Cua Ban">
+                        <button>Subscribe</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">Privacy Policy</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer-last">
+            <div class="hihi">
+                <div>© Glowing 2023</div>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div>
+                <img src="../Img/logoMyPham.png" alt="">
+            </div>
+            <div class="pay">
+                <img src="../Img/pay.png" alt="">
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('resize', function () {
+            var iconList = document.getElementById('iconList');
+            if (window.innerWidth < 992) {
+                iconList.style.display = 'none';
+            } else {
+                iconList.style.display = 'flex';
+            }
+        });
+        // Không cần hiển thị icon khi trang tải lần đầu
+        window.onload = function () {
+            var iconList = document.getElementById('iconList');
+            if (window.innerWidth < 992) {
+                iconList.style.display = 'none';
+            }
+        };
+        AOS.init();
+        // Carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            var carousel = document.getElementById('carouselExampleIndicators');
+            var carouselItems = carousel.querySelectorAll('.carousel-item');
+
+            carousel.addEventListener('slide.bs.carousel', function (event) {
+                var direction = event.direction; // Lấy hướng chuyển động của carousel
+
+                // Thêm hoặc xóa lớp CSS tương ứng để thực hiện hiệu ứng mờ
+                carouselItems.forEach(function (item) {
+                    if (direction === 'left') {
+                        item.classList.add('fade-down');
+                        item.classList.remove('fade-up');
+                    } else {
+                        item.classList.add('fade-up');
+                        item.classList.remove('fade-down');
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Home</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Hieu ung Scroll-->
+    <link rel="stylesheet" href="../aos-master/dist/aos.css" rel="stylesheet">
+    <script src="../aos-master/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <script src="../js/sanPham.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg header">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="nav-link"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="Home.html">
+                        HOME
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="DanhSachSanPhamChuaDangNhap.html">PRODUCT</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="TrangThongTinChuaDangNhap.html">DOCS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LienLacChuaDangNhap.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand" href="#"><img class="logo" src="../Img/logoMyPham.png" alt=""> </a>
+        <ul class="navbar-nav mr-auto" id="iconList">
+            <li class="nav-item">
+                <a class="nav-link" href="TimKiem.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#myModalsignin">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-regular fa-star"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="DangNhap.html"><i class="fa-solid fa-basket-shopping"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModalsignin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="flase">
+        <div class="modal-dialog" style="color: white;">
+            <div class="modal-content" style="background-color: #1F251D; width: 100%;">
+                <div class="modal-header ">
+                    <h3>Sign In</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex" style=" justify-content: center;">
+                        <p>Bạn không có tài khoản ? <a href="DangKy.html">Sign up</a> Now</p>
+                    </div>
+
+                    <form action="" onsubmit="login()">
+                        <table style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2"> <input class="form-control"
+                                            style="margin-top: 10px; background-color: #292D32;" type="text" required
+                                            placeholder="Nhập vào UserName" id="username">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input class="form-control"
+                                            style="margin-top: 10px; width: 100%; background-color: #292D32;"
+                                            type="password" required placeholder="Nhập vào Password" id="password">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 65%; padding-top: 10px; align-items: baseline;" class="d-flex">
+                                        <input style="margin-right: 5px; width: 20px;" type="checkbox" name=""
+                                            id="checkbox">
+                                        <p for="checkbox">Nhớ tài khoản</p>
+                                    </td>
+                                    <td style="width: 50%; text-align: right;">
+                                        <a href="#">Bạn quên mật khẩu ?</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><button type="submit" class="btn "
+                                            style="background-color: #2F473A; color: white; width: 100%;">Đăng
+                                            Nhập</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="model-footter">
+                    <div class="text-center">
+                        <span>or Log-in with</span>
+                    </div>
+                    <div class="d-flex " style="justify-content: space-around;">
+                        <a href="#" class="login"
+                            style=" border: 1px solid #2F473A; text-decoration: none; color: white; padding: 10px 40px; border-radius: 5px; background-color: #2F473A; margin-top: 10px; margin-bottom: 10px;">
+                            <i class="fa-brands fa-facebook" style="color: blue; padding-right: 5px;"></i>
+                            Facebook</a>
+                        <a href=" #" class="login"
+                            style="border: 1px solid #2F473A;  text-decoration: none; color: white;  padding: 10px 45px; border-radius: 5px; background-color: #2F473A; margin-top: 10px; margin-bottom: 10px;"><i
+                                class="fa-brands fa-google" style="color: red; padding-right: 5px;"></i>Google</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ket thuc model -->
+    <div class="content">
+        <!-- Carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="content-top-1">
+                        <div data-aos="fade-down" data-aos-duration="1500" class="content-top-left "
+                            style="padding-top: 100px; padding-left: 50px;">
+                            <div class="row">
+                                <div class="col-6" style="font-size: 30px; font-weight: bold ;">Get the glow</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6" style="font-size: 45px; font-weight: bold ;">
+                                    Be Your <br> Kind of Beauty
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6" style="font-size: 25px;">
+                                    Made using clean, non-toxic ingredients, our products are designed for everyone.
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1500">
+                            <button class="btn"
+                                style="color: white; padding-left: 35px; padding-right: 35px; background-color: #2F473A; margin-top: 50px; margin-left: 50px; font-size: 20px;">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-top-2">
+                        <div data-aos="fade-down" data-aos-duration="1500" class="content-top-left "
+                            style="padding-top: 100px; padding-left: 50px;">
+                            <div class="row">
+                                <div class="col-6" style="font-size: 30px; font-weight: bold ;">Essenstial Items</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6" style="font-size: 45px; font-weight: bold ;">
+                                    Beauty Inspired <br> by Real Life
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6" style="font-size: 25px;">
+                                    Made using clean, non-toxic ingredients, our products are designed for everyone.
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1500">
+                            <button class="btn"
+                                style="color: white; padding-left: 35px; padding-right: 35px; background-color: #2F473A; margin-top: 50px; margin-left: 50px; font-size: 20px;">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-top-3">
+                        <div data-aos="fade-down" data-aos-duration="1500" class="content-top-left "
+                            style="padding-top: 100px; padding-left: 50px;">
+                            <div class="row">
+                                <div class="col-6" style="font-size: 30px; font-weight: bold ;">New collection</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6" style="font-size: 45px; font-weight: bold ;">
+                                    Get The Perfectly <br> Hydrated Skin
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6" style="font-size: 25px;">
+                                    Made using clean, non-toxic ingredients, our products are designed for everyone.
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1500">
+                            <button class="btn"
+                                style="color: white; padding-left: 35px; padding-right: 35px; background-color: #2F473A; margin-top: 50px; margin-left: 50px; font-size: 20px;">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- Carousel End-->
+        <div class="content-2">
+            <div class="d-flex " style="flex-direction: column;align-items: center;">
+                <h2 style="color: #ffffff; font-weight: bold; padding: 10px;">Our Featured Products</h2>
+                <div style="color: #ffffffaf; font-size: larger; padding-bottom: 50px;">Get the skin you want to feel
+                </div>
+            </div>
+            <!-- SP -->
+            <!-- SP-2 -->
+            <div class="products-2">
+                <div class="product-2-top">
+                    <div data-aos="fade-up" data-aos-duration="1500"
+                        style="position: relative; background-image: url(../Img/HinhP3_1.jpg); background-size: contain;"
+                        class="product-2-top-child">
+                        <div style="color: white;" class="product-2-top-child-child">
+                            <p style="padding-top: 40px;">NEW COLLECTION</p>
+                            <h3>Intensive Glow C+ <br> Serum</h3>
+                            <button style="margin-top: 50px; background-color: white; color: rgb(0, 0, 0);"
+                                class="btn">Explore
+                                More</button>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1500"
+                        style=" position: relative; background-image: url(../Img/HinhP3_2.jpg); background-size: contain;"
+                        class="product-2-top-child">
+                        <div class="product-2-top-child-child">
+                            <p style="padding-top: 40px;">NEW COLLECTION</p>
+                            <h3>Intensive Glow C+ <br> Serum</h3>
+                            <button style="margin-top: 50px; background-color: white; color: rgb(0, 0, 0);"
+                                class="btn">Explore
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-3">
+            <div class="d-flex " style="flex-direction: column;align-items: center;">
+                <h2 style="color: #ffffff; font-weight: bold; padding: 10px; padding-top: 50px;">More to Discover</h2>
+                <div style="color: #ffffffaf; font-size: larger; padding-bottom: 50px;">Our bundles were designed to
+                    conveniently package your tanning essentials while saving you money.
+                </div>
+            </div>
+            <div class="content-3-bottom">
+
+                <div class="products-3 d-flex" style="justify-content: space-around;">
+                    <div data-aos="fade-up" data-aos-duration="1500" class="product-3-top-child">
+                        <img src="../Img/SummerCollection-1.jpg" alt="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1500" class="product-3-top-child">
+                        <img src="../Img/SummerCollection-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="products-3 d-flex" style="justify-content: space-around;">
+                    <div class="product-3-bottom-child">
+                        <h4 style="color: white; padding: 10px;">Summer Collection</h4>
+                        <p><a href="Home.html">Read More -></a></p>
+                    </div>
+                    <div class="product-3-bottom-child">
+                        <h4 style="color: white; padding: 10px;">Summer Collection</h4>
+                        <p><a style="text-decoration: none; text-align: center" href=" Home.html">Shop Now -></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-4 ">
+            <div data-aos="fade-up" data-aos-duration="1500" class="col-3 ">
+                <img src="../Img/Last-1.jpg" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500" class="col-3 ">
+                <img src="../Img/Last-2.jpg" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500" class="col-3  ">
+                <img src="../Img/Last-3.jpg" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500" class="col-3  ">
+                <img src="../Img/Last-4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <footer style="color: white;">
+        <table>
+            <thead>
+                <tr>
+                    <th> Company</th>
+                    <th>Useful links</th>
+                    <th>Information</th>
+                    <th>Good emails.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Find a location nearest</td>
+                    <td><a href="#">New Products</a></td>
+                    <td><a href="#">Start a Return</a></td>
+                    <td>Enter your email below to be the first to know about new collections and product launches.</td>
+                </tr>
+                <tr>
+                    <td>+(84) 974122850</td>
+                    <td><a href="#">Bundle & Save</a></td>
+                    <td><a href="#">Shipping FAQ</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#">nghiemchithien471@gmail.com</a></td>
+                    <td><a href="#">Online Gift Card</a></td>
+                    <td><a href="#">Terms & Conditions</a></td>
+                    <td>
+                        <input type="text" name="" id="" placeholder="Nhap Email Cua Ban">
+                        <button>Subscribe</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">Privacy Policy</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer-last">
+            <div class="hihi">
+                <div>© Glowing 2023</div>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div>
+                <img src="../Img/logoMyPham.png" alt="">
+            </div>
+            <div class="pay">
+                <img src="../Img/pay.png" alt="">
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script>
+        window.addEventListener('resize', function () {
+            var iconList = document.getElementById('iconList');
+            if (window.innerWidth < 992) {
+                iconList.style.display = 'none';
+            } else {
+                iconList.style.display = 'flex';
+            }
+        });
+        // Không cần hiển thị icon khi trang tải lần đầu
+        window.onload = function () {
+            var iconList = document.getElementById('iconList');
+            if (window.innerWidth < 992) {
+                iconList.style.display = 'none';
+            }
+        };
+        AOS.init();
+        // Carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            var carousel = document.getElementById('carouselExampleIndicators');
+            var carouselItems = carousel.querySelectorAll('.carousel-item');
+
+            carousel.addEventListener('slide.bs.carousel', function (event) {
+                var direction = event.direction; // Lấy hướng chuyển động của carousel
+
+                // Thêm hoặc xóa lớp CSS tương ứng để thực hiện hiệu ứng mờ
+                carouselItems.forEach(function (item) {
+                    if (direction === 'left') {
+                        item.classList.add('fade-down');
+                        item.classList.remove('fade-up');
+                    } else {
+                        item.classList.add('fade-up');
+                        item.classList.remove('fade-down');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+
+</html>
